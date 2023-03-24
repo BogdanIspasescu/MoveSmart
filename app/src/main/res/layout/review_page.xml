@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradient">
+
+    <TextView
+        android:id="@+id/reviewPage_tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/reviewPage_ratingBar_rating"
+        android:text="@string/give_review_question"
+        android:padding="20dp"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <RatingBar
+        android:id="@+id/reviewPage_ratingBar_rating"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reviewPage_tv_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="112dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/reviewPage_btn_sendRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reviewPage_ratingBar_rating"
+        app:layout_constraintEnd_toStartOf="@id/reviewPage_btn_cancelRating"
+        style="@style/buttonStyle"
+        android:backgroundTint="@color/bckd_grad_color_1"
+        android:text="@string/rating_send_grade_text"
+        >
+
+    </Button>
+
+    <Button
+        android:id="@+id/reviewPage_btn_cancelRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/reviewPage_btn_sendRating"
+        app:layout_constraintTop_toBottomOf="@id/reviewPage_ratingBar_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/buttonStyle"
+        android:backgroundTint="@color/bckd_grad_color_1"
+        android:text="@string/rating_cancel"
+        >
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

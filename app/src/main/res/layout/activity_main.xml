@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_gradient"
+    >
+
+
+    <ImageView
+        android:id="@+id/main_iv_departure_icon"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintEnd_toStartOf="@id/main_tv_autocomplete_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_place_24" />
+
+    <AutoCompleteTextView
+        android:id="@+id/main_tv_autocomplete_start"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="@string/actv_hint_departure"
+        app:layout_constraintStart_toEndOf="@id/main_iv_departure_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        tools:ignore="LabelFor">
+    </AutoCompleteTextView>
+
+    <ImageView
+        android:id="@+id/main_iv_arrival_icon"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_autocomplete_start"
+        app:layout_constraintEnd_toStartOf="@id/main_tv_autocomplete_destination"
+        app:srcCompat="@drawable/baseline_flag_24"
+        tools:layout_editor_absoluteY="317dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/main_tv_autocomplete_destination"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="@string/actv_hint_destination"
+        app:layout_constraintStart_toEndOf="@id/main_iv_arrival_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_autocomplete_start"
+        android:layout_marginTop="16dp"
+        tools:ignore="LabelFor">
+    </AutoCompleteTextView>
+
+    <FrameLayout
+        android:id="@+id/main_frame_for_maps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/main_generateRouteButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_autocomplete_destination" />
+
+    <Button
+        android:id="@+id/main_reviewButton"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Lasa review"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="@id/main_generateRouteButton" />
+
+    <Button
+        android:id="@+id/main_generateRouteButton"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Afla ruta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

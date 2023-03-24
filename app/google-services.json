@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1047966413356",
+    "firebase_url": "https://bachelor-database-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "bachelor-database",
+    "storage_bucket": "bachelor-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047966413356:android:2aa038ac19098571681789",
+        "android_client_info": {
+          "package_name": "eu.ase.ro.aplicatielicenta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047966413356-bv2qnlhj1qc1pap3p5o3i8p8asufdc06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGQZmxLKnH_qfnbjN1D7srnVHmaTYu3T8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047966413356-bv2qnlhj1qc1pap3p5o3i8p8asufdc06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

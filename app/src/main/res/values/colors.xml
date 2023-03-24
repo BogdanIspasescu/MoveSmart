@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!--culori custom-->
+    <color name="background">#E3C565</color>
+    <color name="background_alt">#C8A951</color>
+    <color name="button_color">#FDE992</color>
+    <color name="til_color">#E7C27D</color>
+
+    <color name="pastel_orange">#E7B449</color>
+    <color name="pastel_sand">#FDD55C</color>
+
+    <!--de la light la dark-->
+    <color name="pastel_blue_1">#BFD4DB</color>
+    <color name="pastel_blue_2">#AECBD6</color>
+    <color name="pastel_blue_3">#A4C3D2</color>
+    <color name="pastel_blue_4">#96B9D0</color>
+    <color name="pastel_blue_5">#78A2CC</color>
+
+    <color name="faded_brown_1">#7c6f60</color>
+    <color name="faded_brown_2">#74695d</color>
+    <color name="faded_brown_3">#696158</color>
+    <color name="faded_brown_4">#5e5852</color>
+    <color name="faded_brown_5">#56514d</color>
+
+    <color name="stb_red">#fb0808</color>
+
+
+    <color name="bckd_grad_color_4">#FDE992</color>
+    <color name="bckd_grad_color_3">#E3C565</color>
+    <color name="bckd_grad_color_2">#E7C27D</color>
+    <color name="bckd_grad_color_1">#C8A951</color>
+
+
+    <!--Dialog colors-->
+    <color name="colorPrimary">#FF4081</color>
+    <color name="colorPrimaryDark">#F50057</color>
+    <color name="colorAccent">#00BCD4</color>
+    <color name="colorGradientStart">#FB0808</color>
+    <color name="colorGradientMiddle1">#FC6B6B</color>
+    <color name="colorGradientMiddle2">#FFAFAF</color>
+    <color name="colorGradientEnd">#FCE3E3</color>
+</resources>

@@ -1,0 +1,67 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AplicatieLicenta" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/faded_brown_2</item>
+        <item name="colorPrimaryVariant">@color/background_alt</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/bckd_grad_color_2</item>
+        <item name="colorSecondaryVariant">@color/bckd_grad_color_3</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/faded_brown_1</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+
+    <style name="buttonStyle">
+        <item name="android:backgroundTint">@color/faded_brown_5</item>
+        <item name="fontFamily">@font/advent_pro_light</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">30dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:shadowColor">@color/black</item>
+    </style>
+
+    <style name="CustomAlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <!-- Background Color -->
+        <item name="colorOnBackground">#FFFFFF</item>
+
+        <!-- Title Text Color -->
+        <item name="android:textColorPrimary">#000000</item>
+
+        <!-- Message Text Color -->
+        <item name="android:textColorSecondary">#000000</item>
+
+        <!-- Button Colors -->
+        <item name="colorPrimary">@color/colorGradientEnd</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">@color/colorGradientMiddle1</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSurface">@color/colorGradientStart</item>
+        <item name="colorOnSurface">#000000</item>
+    </style>
+
+    <style name="textViewStyle">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">21sp</item>
+        <item name="fontFamily">@font/advent_pro_light</item>
+        <item name="textFillColor">@color/faded_brown_1</item>
+    </style>
+
+    <style name="tietStyle">
+        <item name="android:fontFamily">@font/advent_pro_light</item>
+        <item name="textFillColor">@color/black</item>
+    </style>
+
+    <style name="tilStyle">
+        <item name="android:padding">20dp</item>
+        <item name="android:textColorHint">@color/stb_red</item>
+        <item name="boxStrokeColor">@color/faded_brown_1</item>
+    </style>
+</resources>
