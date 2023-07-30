@@ -1,7 +1,4 @@
-package eu.ase.ro.aplicatielicenta.classes;
-
-import java.util.Calendar;
-import java.util.Date;
+package eu.ase.ro.aplicatielicenta.account;
 
 public class Review {
     private float rating;

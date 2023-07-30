@@ -1,56 +1,76 @@
 <resources>
     <string name="app_name">MoveSmart</string>
 
-    <string name="register_now_tv_message">Nu aveti inca cont? <u>Apasati aici</u>!</string>
+    <string name="register_now_tv_message">Nu aveți inca cont? <u>Apăsati aici</u>!</string>
     <string name="hint_tiet_email_address">Adresa dvs. de email</string>
     <string name="hint_tiet_password">Parola</string>
-    <string name="btn_authentificate_text">Autentificati-va in cont</string>
+    <string name="btn_authentificate_text">Autentificați-vă în cont</string>
     <string-array name="genders">
         <item>Masculin</item>
         <item>Feminin</item>
     </string-array>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="register_page_tv_gender">Sexul:</string>
     <string name="register_page_tiet_password">Parola</string>
     <string name="register_page_tiet_email">Email-ul dvs.</string>
     <string name="register_page_tiet_surname">Prenumele dvs.</string>
     <string name="register_page_tiet_firstname">Numele dvs.</string>
     <string name="birthdate_text">%1$d/%2$d/%3$d</string>
-    <string name="register_page_hint_confirm_password">Confirmati parola</string>
-    <string name="register_page_intro_message">Pentru a va crea un cont de utilizator si a putea folosi aplicatia,\n completati urmatoarele date:</string>
+    <string name="register_page_hint_confirm_password">Confirmați parola</string>
+    <string name="register_page_intro_message">Pentru a vă crea un cont de utilizator și a putea folosi aplicatia,\n completați următoarele date:</string>
     <string name="logo_stb">logo stb</string>
     <string name="button_to_create_account">button to create account</string>
     <string name="register_page_tv_date_of_birth">Data nasterii:</string>
     <string name="register_page_default_birthdate_text">Setati data</string>
-    <string name="register_user_created_confirmation_message">Utilizator creat cu succes, adaugare in baza de date...</string>
-    <string name="give_review_question">Cat de utile au fost informatiile oferite de aplicatie?</string>
-    <string name="rating_send_grade_text">Trimte nota</string>
-    <string name="rating_cancel">Anuleaza</string>
-    <string name="dialog_thank_you_message">Multumim pentru review!</string>
-    <string name="login_error_message">Email sau parola invalida</string>
-    <string name="email_already_exists_error_message">Exista deja un cont inregistrat cu aceasta adresa</string>
-    <string name="actv_hint_destination">Destinatie</string>
+    <string name="register_user_created_confirmation_message">Utilizator creat cu succes, adăugare în baza de date…</string>
+    <string name="give_review_question">Pe o scară de la 1 la 5, cât de utile au fost informațiile oferite de aplicație?</string>
+    <string name="rating_send_grade_text">Trimte review</string>
+    <string name="rating_cancel">Închide</string>
+    <string name="dialog_thank_you_message">Mulțumim pentru review!</string>
+    <string name="login_error_message">Email sau parolă invalidă!</string>
+    <string name="email_already_exists_error_message">Există deja un cont înregistrat cu această adresă!</string>
+    <string name="actv_hint_destination">Destinație</string>
     <string name="actv_hint_departure">Punct de plecare</string>
-    <string name="register_empty_email_error">Email-ul nu poate fi lasat gol!</string>
-    <string name="register_email_wrong_format_error">Email invalid! Ce ati introdus nu respecta formatul unui email.</string>
-    <string name="register_last_name_empty_error">Prenumele nu poate fi lasat gol!</string>
-    <string name="register_last_name_too_short_error">Prenumele introdus nu este conform,trebuie sa aiba minim 3 caractere!</string>
-    <string name="register_first_name_empty_error">Numele nu poate fi lasat gol!</string>
-    <string name="register_first_name_too_short_error">Numele introdus nu este conform, trebuie sa aiba minim 3 caractere!</string>
-    <string name="register_password_format_not_respected_error">Parola trb sa contina cel un caracter special, o litera mare si o cifra!</string>
-    <string name="register_password_too_short_error">Parola trebuie sa aiba minim 6 caractere!</string>
+    <string name="register_empty_email_error">Email-ul nu poate fi lăsat gol!</string>
+    <string name="register_email_wrong_format_error">Email invalid! Ce ați introdus nu respectă formatul unui email.</string>
+    <string name="register_last_name_empty_error">Prenumele nu poate fi lăsat gol!</string>
+    <string name="register_last_name_too_short_error">Prenumele introdus nu este conform,trebuie sa aibă minim 3 caractere!</string>
+    <string name="register_first_name_empty_error">Numele nu poate fi lăsat gol!</string>
+    <string name="register_first_name_too_short_error">Numele introdus nu este conform, trebuie sa aibă minim 3 caractere!</string>
+    <string name="register_password_format_not_respected_error">Parola trebuie să conțină cel puțin un caracter special, o literă mare și o cifră!</string>
+    <string name="register_password_too_short_error">Parola trebuie sa aibă minim 6 caractere!</string>
     <string name="register_passwords_dont_match_error">Parolele introduse nu sunt identice!</string>
-    <string name="register_birthdate_invalid_errror">Data de nastere nu poate fi azi sau dupa ziua de azi!</string>
-    <string name="register_birthdate_empty_error">Campul datii de nastere nu poate fi lasat gol!</string>
+    <string name="register_birthdate_invalid_errror">Data de naștere nu poate fi azi sau în viitor!</string>
+    <string name="register_birthdate_empty_error">Câmpul dății de naștere nu poate fi lăsat gol!</string>
     <string name="dialog_go_back_to_login_title">Revenire la Login</string>
-    <string name="dialog_go_back_to_login_message">Doresti sa revii la interfata de autentificare?</string>
+    <string name="dialog_go_back_to_login_message">Doriți să reveniți la interfața de autentificare?</string>
     <string name="dialog_go_back_to_login_positive_button_message">Da, vreau</string>
     <string name="dialog_go_back_to_login_negative_button_message">Nu, raman</string>
     <string name="classic_menu_logout_button_text">Logout</string>
     <string name="main_logout_dialog_title">Solicitare de delogare</string>
-    <string name="main_logout_dialog_message">Doriti sa iesiti din cont?</string>
+    <string name="main_logout_dialog_message">Doriți sa iesiti din cont?</string>
     <string name="main_logout_positive_button_text">Da</string>
-    <string name="main_logout_negative_button_text">Nu, doresc sa raman</string>
-    <string name="main_get_route_empty_destination_error_message">Nu ati selectat un punct de sosire!</string>
-    <string name="main_get_route_empty_departure_error_message">Nu ati selectat un punct de plecare!</string>
+    <string name="main_logout_negative_button_text">Nu, doresc să răman</string>
+    <string name="main_get_route_empty_destination_error_message">Nu ați selectat un punct de sosire!</string>
+    <string name="main_get_route_empty_departure_error_message">Nu ați selectat un punct de plecare!</string>
+    <string name="login_page_remember_me_checkbox_text">Remember me</string>
+    <string name="preferin_e_de_transport">Preferințe de transport:</string>
+    <string name="clear_fields">Șterge câmpuri</string>
+    <string name="determine_route">Află ruta</string>
+    <string name="leave_review">Lasă review</string>
+    <string-array name="transit_preference">
+        <item>Transferuri mai puține</item>
+        <item>Mers mai puțin pe jos</item>
+    </string-array>
+    <string name="actionbar_custom_title">Încotro astăzi, %1$s?</string>
+    <string name="alert_dialog_steps_btn_close_text">Închide</string>
+    <string name="cum_ajung">Cum ajung?</string>
+    <string name="app_info">Informații aplicație</string>
+    <string name="current_location">Current Location</string>
+    <string name="copyright_string">Copyright ©2023 Bogdan Andrei Ispasescu\nAll rights reserved.</string>
+    <string name="estimated_arrival_time">Timp estimat de sosire:%1$s</string>
+    <string name="departure_time">Timp de deplasare:%1$s</string>
+    <string name="travel_distanace">Distanță de deplasare:%1$s</string>
+    <string name="travel_cost">Cost deplasare:%1$s</string>
+    <string name="user_not_found_error_message">User not found</string>
+
 </resources>

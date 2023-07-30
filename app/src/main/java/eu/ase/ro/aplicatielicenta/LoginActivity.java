@@ -1,33 +1,19 @@
 package eu.ase.ro.aplicatielicenta;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
-import eu.ase.ro.aplicatielicenta.R;
-import eu.ase.ro.aplicatielicenta.RegisterAccountActivity;
-import eu.ase.ro.aplicatielicenta.classes.DateConverter;
-import eu.ase.ro.aplicatielicenta.classes.User;
+import eu.ase.ro.aplicatielicenta.account.User;
 import eu.ase.ro.aplicatielicenta.firebase.FirebaseService;
 import eu.ase.ro.aplicatielicenta.interfaces.Callback;
 
@@ -58,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
         if (lastRememberMeCheck) {
             tiet_email.setText(preferences.getString(REMEMBERED_EMAIL, ""));
             tiet_password.setText(preferences.getString(REMEMBERED_PASSWORD, ""));
+            sharedPreferencesEditor.putBoolean(REMEMBER_ME_STATE,false);
+            sharedPreferencesEditor.apply();
         }else{
             tiet_email.setText("");
             tiet_password.setText("");
@@ -81,8 +69,6 @@ public class LoginActivity extends AppCompatActivity {
         loginPage_btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //AICI VERIFIC DACA CONTUL (perechea email-parola) SUNT IN LISTA LUATA DE PE CLOUD (serverUsers)
-
                 firebaseService.checkUserExistence(tiet_email.getText().toString(), tiet_password.getText().toString(), new Callback<Boolean>() {
                     @Override
                     public void runResultOnUiThread(Boolean result) {
@@ -104,7 +90,6 @@ public class LoginActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-
                         }
                         else{
                             Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_error_message), Toast.LENGTH_SHORT).show();
@@ -113,7 +98,5 @@ public class LoginActivity extends AppCompatActivity {
                 });
             }
         });
-
-
     }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/background_gradient"
+    android:background="@drawable/main_activity_wallpaper"
     >
 
 
@@ -26,6 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:hint="@string/actv_hint_departure"
+        android:backgroundTint="@color/white"
         app:layout_constraintStart_toEndOf="@id/main_iv_departure_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -51,6 +52,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:hint="@string/actv_hint_destination"
+        android:backgroundTint="@color/white"
         app:layout_constraintStart_toEndOf="@id/main_iv_arrival_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_tv_autocomplete_start"
@@ -65,31 +67,82 @@
         app:layout_constraintBottom_toTopOf="@+id/main_generateRouteButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_tv_autocomplete_destination" />
-
-    <Button
-        android:id="@+id/main_reviewButton"
-        style="@style/buttonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:text="Lasa review"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.879"
-        app:layout_constraintStart_toStartOf="@id/main_generateRouteButton" />
+        app:layout_constraintTop_toBottomOf="@+id/main_btn_clear_fields" />
 
     <Button
         android:id="@+id/main_generateRouteButton"
         style="@style/buttonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="12dp"
-        android:text="Afla ruta"
+        android:backgroundTint="@color/white"
+        android:elevation="10dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/determine_route"
+        android:textColor="@color/stb_red"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/main_btn_show_directions"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/main_btn_show_directions"
+        style="@style/buttonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/white"
+        android:elevation="10dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/cum_ajung"
+        android:textColor="@color/stb_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/main_generateRouteButton" />
+
+    <Spinner
+        android:id="@+id/main_spn_transit_preference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/transit_preference"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/main_btn_clear_fields"
+        app:layout_constraintTop_toBottomOf="@+id/tv_transit_preference" />
+
+    <Button
+        android:id="@+id/main_btn_clear_fields"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/clear_fields"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/stb_red"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toStartOf="@id/main_spn_transit_preference"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_autocomplete_destination" />
+
+    <TextView
+        android:id="@+id/tv_transit_preference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preferin_e_de_transport"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/main_btn_clear_fields"
+        app:layout_constraintTop_toBottomOf="@+id/main_tv_autocomplete_destination" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

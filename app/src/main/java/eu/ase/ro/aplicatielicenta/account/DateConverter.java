@@ -1,4 +1,4 @@
-package eu.ase.ro.aplicatielicenta.classes;
+package eu.ase.ro.aplicatielicenta.account;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

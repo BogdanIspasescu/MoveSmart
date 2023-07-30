@@ -2,16 +2,21 @@
     <!-- Base application theme. -->
     <style name="Theme.AplicatieLicenta" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/faded_brown_2</item>
-        <item name="colorPrimaryVariant">@color/background_alt</item>
+        <item name="colorPrimary">@color/stb_red</item>
+        <item name="colorPrimaryVariant">@color/colorGradientMiddle1</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/bckd_grad_color_2</item>
         <item name="colorSecondaryVariant">@color/bckd_grad_color_3</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/faded_brown_1</item>
+        <item name="android:statusBarColor">@color/black</item>
+
         <!-- Customize your theme here. -->
+
+<!--        culoarea pentru accentul textinput-urilor-->
+        <item name="colorAccent">@color/colorGradientStart</item>
+
 
     </style>
 
@@ -56,12 +61,16 @@
 
     <style name="tietStyle">
         <item name="android:fontFamily">@font/advent_pro_light</item>
-        <item name="textFillColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowRadius">10</item>
     </style>
 
     <style name="tilStyle">
         <item name="android:padding">20dp</item>
         <item name="android:textColorHint">@color/stb_red</item>
-        <item name="boxStrokeColor">@color/faded_brown_1</item>
+        <item name="boxStrokeColor">@color/colorGradientStart</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowRadius">10</item>
     </style>
 </resources>

@@ -21,7 +21,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/loginPage_til_email"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,12 +38,14 @@
             android:drawableStart="@drawable/ic_mail"
             android:hint="@string/hint_tiet_email_address"
             style="@style/tietStyle"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/loginPage_til_password"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         style="@style/tilStyle"
@@ -58,8 +60,12 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_password"
             android:hint="@string/hint_tiet_password"
+            android:autofillHints="password"
             style="@style/tietStyle"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -69,7 +75,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/advent_pro_light"
         android:padding="20dp"
-        android:text="Remember me"
+        android:buttonTint="@color/white"
+        android:text="@string/login_page_remember_me_checkbox_text"
+        android:textColor="@color/stb_red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginPage_til_password"
@@ -81,6 +89,11 @@
     <Button
         android:id="@+id/loginPage_btn_login"
         style="@style/buttonStyle"
+        android:textColor="@color/stb_red"
+        android:backgroundTint="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:elevation="10dp"
         android:layout_width="250dp"
         android:layout_height="65dp"
         android:layout_marginStart="80dp"
@@ -89,15 +102,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginPage_checkbox_remember_me" />
+        app:layout_constraintTop_toBottomOf="@id/loginPage_checkbox_remember_me"
+
+
+       />
 
     <TextView
         android:id="@+id/loginPage_tv_gotoregister"
+        style="@style/textViewStyle"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="@string/register_now_tv_message"
-        style="@style/textViewStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginPage_btn_login" />

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_gradient">
+    android:background="@drawable/main_activity_wallpaper">
 
     <TextView
         android:id="@+id/reviewPage_tv_question"
@@ -14,7 +14,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/reviewPage_ratingBar_rating"
         android:text="@string/give_review_question"
+        android:textAlignment="center"
         android:padding="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="177dp"
         tools:layout_editor_absoluteY="46dp" />
 
@@ -37,7 +40,11 @@
         app:layout_constraintTop_toBottomOf="@id/reviewPage_ratingBar_rating"
         app:layout_constraintEnd_toStartOf="@id/reviewPage_btn_cancelRating"
         style="@style/buttonStyle"
-        android:backgroundTint="@color/bckd_grad_color_1"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/stb_red"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:elevation="10dp"
         android:text="@string/rating_send_grade_text"
         >
 
@@ -51,7 +58,11 @@
         app:layout_constraintTop_toBottomOf="@id/reviewPage_ratingBar_rating"
         app:layout_constraintEnd_toEndOf="parent"
         style="@style/buttonStyle"
-        android:backgroundTint="@color/bckd_grad_color_1"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/stb_red"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:elevation="10dp"
         android:text="@string/rating_cancel"
         >
 

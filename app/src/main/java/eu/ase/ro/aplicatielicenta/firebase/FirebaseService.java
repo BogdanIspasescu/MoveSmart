@@ -9,11 +9,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import eu.ase.ro.aplicatielicenta.classes.Review;
-import eu.ase.ro.aplicatielicenta.classes.User;
+import eu.ase.ro.aplicatielicenta.account.Review;
+import eu.ase.ro.aplicatielicenta.account.User;
 import eu.ase.ro.aplicatielicenta.interfaces.Callback;
 
 public class FirebaseService {
@@ -47,20 +44,6 @@ public class FirebaseService {
         String id = reference.push().getKey(); //generam cheia de acces ptr user
         user.setId(id); //o setam
         reference.child(user.getId()).setValue(user); //scriem userul
-    }
-
-    public void updateUser(User user) {
-        if (user == null || user.getId() == null || user.getId().trim().isEmpty()) {
-            return;
-        }
-        reference.child(user.getId()).setValue(user);
-    }
-
-    public void deleteUser(User user) {
-        if (user == null || user.getId() == null || user.getId().trim().isEmpty()) {
-            return;
-        }
-        reference.child(user.getId()).removeValue();
     }
 
 public void insertReview(Review review, String userId){
@@ -117,4 +100,29 @@ public void insertReview(Review review, String userId){
             }
         });
     }
+
+    public void getUserLastNameByEmail(String email, Callback<String> callback) {
+        Query query = reference.orderByChild("email").equalTo(email);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
+                        User user = userSnapshot.getValue(User.class);
+                        String lastName = user.getLastName();
+                        callback.runResultOnUiThread(lastName);
+                        return;
+                    }
+                }
+                callback.runResultOnUiThread(null);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                callback.runResultOnUiThread(null);
+            }
+        });
+    }
+
+
 }

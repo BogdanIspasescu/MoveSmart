@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <item
     android:id="@+id/main_classic_menu_logout"
     android:title="@string/classic_menu_logout_button_text">
 </item>
+    <item android:id="@+id/main_classic_set_current_location"
+        android:title="@string/current_location"
+        android:icon="@drawable/baseline_gps_fixed_24_white"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/main_classic_menu_copyright"
+        android:title="@string/app_info">
+    </item>
 </menu>

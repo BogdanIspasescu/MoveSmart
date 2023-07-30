@@ -28,9 +28,11 @@
         android:layout_marginTop="24dp"
         android:text="@string/register_page_intro_message"
         style="@style/textViewStyle"
-        android:shadowRadius="5"
-        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:shadowColor="@color/white"
         android:textSize="15sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/register_page_tiet_firstname"
+            android:backgroundTint="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,24 +76,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/register_page_tiet_surname"
+            android:backgroundTint="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/registerPage_til_email"
         style="@style/tilStyle"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/registerPage_til_last_name">
+        app:layout_constraintTop_toBottomOf="@id/registerPage_til_last_name"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/registerPage_tiet_email"
             style="@style/tietStyle"
             android:layout_width="match_parent"
+            android:drawableStart="@drawable/ic_mail"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
             android:hint="@string/register_page_tiet_email"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -110,7 +117,9 @@
             style="@style/tietStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_password"
             android:hint="@string/register_page_tiet_password"
+            android:backgroundTint="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,7 +138,9 @@
             style="@style/tietStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_password"
             android:hint="@string/register_page_hint_confirm_password"
+            android:backgroundTint="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -140,7 +151,9 @@
         android:fontFamily="@font/advent_pro_light"
         android:text="@string/register_page_tv_gender"
         android:textAlignment="center"
-        android:textColor="@color/stb_red"
+        android:textColor="@color/white"
+        android:shadowColor="@color/white"
+        android:shadowRadius="10"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@id/registerPage_spn_gender"
         app:layout_constraintStart_toStartOf="parent"
@@ -152,6 +165,7 @@
         android:layout_height="wrap_content"
         android:entries="@array/genders"
         app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/white"
         app:layout_constraintStart_toEndOf="@id/registerPage_tv_gender"
         app:layout_constraintTop_toBottomOf="@id/registerPage_til_password"
         tools:ignore="TouchTargetSizeCheck" />
@@ -164,8 +178,10 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/advent_pro_light"
         android:text="@string/register_page_tv_date_of_birth"
-        android:textAlignment="center"
-        android:textColor="@color/stb_red"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:shadowColor="@color/white"
+        android:shadowRadius="10"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@id/registerPage_btn_edit_dateOfBirth"
         app:layout_constraintStart_toStartOf="parent"
@@ -190,7 +206,6 @@
         android:layout_marginBottom="8dp"
         android:clickable="true"
         android:contentDescription="@string/button_to_create_account"
-        app:backgroundTint="@color/stb_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.656"

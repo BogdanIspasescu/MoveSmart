@@ -43,4 +43,11 @@
     <color name="colorGradientMiddle1">#FC6B6B</color>
     <color name="colorGradientMiddle2">#FFAFAF</color>
     <color name="colorGradientEnd">#FCE3E3</color>
+
+    <color name="transitStepGradientBlue">#d3f3ff</color>
+    <color name="transitStepGradientGreen">#D2FBBB</color>
+    <color name="transitStepGradientRed">#FFCCCB</color>
+    <color name="transitStepGradientYellow">#FFFFCE</color>
+    <color name="transitStepGradientPurple">#d6b0ff</color>
+
 </resources>

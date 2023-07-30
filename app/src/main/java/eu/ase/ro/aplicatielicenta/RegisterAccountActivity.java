@@ -3,11 +3,9 @@ package eu.ase.ro.aplicatielicenta;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -18,15 +16,14 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import eu.ase.ro.aplicatielicenta.classes.DateConverter;
-import eu.ase.ro.aplicatielicenta.classes.Gender;
-import eu.ase.ro.aplicatielicenta.classes.User;
+import eu.ase.ro.aplicatielicenta.account.DateConverter;
+import eu.ase.ro.aplicatielicenta.account.Gender;
+import eu.ase.ro.aplicatielicenta.account.User;
 import eu.ase.ro.aplicatielicenta.firebase.FirebaseService;
 import eu.ase.ro.aplicatielicenta.interfaces.Callback;
 
@@ -193,10 +190,13 @@ public class RegisterAccountActivity extends Activity {
     private boolean validateEmail(TextInputEditText tiet_email) {
         if (tiet_email.getText() == null) {
             Toast.makeText(getApplicationContext(), getString(R.string.register_empty_email_error), Toast.LENGTH_SHORT).show();
+            tiet_email.requestFocus();
+            return true;
         }
 
         if (!isEmailValid(tiet_email.getText().toString())) {
             Toast.makeText(getApplicationContext(), getString(R.string.register_email_wrong_format_error), Toast.LENGTH_SHORT).show();
+            tiet_email.requestFocus();
             return true;
         }
         return false;
@@ -205,10 +205,12 @@ public class RegisterAccountActivity extends Activity {
     private boolean validateLastName(TextInputEditText tiet_last_name) {
         if (tiet_last_name.getText() == null) {
             Toast.makeText(getApplicationContext(),getString(R.string.register_last_name_empty_error), Toast.LENGTH_SHORT).show();
+            tiet_last_name.requestFocus();
             return true;
         }
         if (tiet_last_name.getText().toString().trim().length() < 3) {
             Toast.makeText(getApplicationContext(), getString(R.string.register_last_name_too_short_error), Toast.LENGTH_SHORT).show();
+            tiet_last_name.requestFocus();
             return true;
         }
         return false;
@@ -217,9 +219,11 @@ public class RegisterAccountActivity extends Activity {
     private boolean validateFirstName(TextInputEditText tiet_first_name) {
         if (tiet_first_name.getText() == null) {
             Toast.makeText(getApplicationContext(), getString(R.string.register_first_name_empty_error), Toast.LENGTH_SHORT).show();
+            tiet_first_name.requestFocus();
             return true;
         }
         if (tiet_first_name.getText().toString().trim().length() < 3) {
+            tiet_first_name.requestFocus();
             Toast.makeText(getApplicationContext(), getString(R.string.register_first_name_too_short_error), Toast.LENGTH_SHORT).show();
             return true;
         }
@@ -233,15 +237,18 @@ public class RegisterAccountActivity extends Activity {
 
         if (!matcher.matches()) {
             Toast.makeText(getApplicationContext(), getString(R.string.register_password_format_not_respected_error), Toast.LENGTH_LONG).show();
+            tiet_password.requestFocus();
             return false;
         }
 
         if (tiet_password.getText().toString().trim().length() < 6) {
             Toast.makeText(getApplicationContext(), getString(R.string.register_password_too_short_error), Toast.LENGTH_SHORT).show();
+            tiet_password.requestFocus();
         }
 
         if (!(tiet_password.getText().toString().trim().equals(tiet_repeat_password.getText().toString().trim()))) {
             Toast.makeText(getApplicationContext(), getString(R.string.register_passwords_dont_match_error), Toast.LENGTH_SHORT).show();
+            tiet_repeat_password.requestFocus();
             return false;
         }
         return true;

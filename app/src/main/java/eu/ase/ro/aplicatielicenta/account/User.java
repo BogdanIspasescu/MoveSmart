@@ -1,12 +1,7 @@
-package eu.ase.ro.aplicatielicenta.classes;
-
-import android.os.Parcel;
-import android.os.Parcelable;
+package eu.ase.ro.aplicatielicenta.account;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class User implements Serializable {
 
